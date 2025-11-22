@@ -4,6 +4,19 @@
     <title>WEBPAGE</title>
     <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script>
+        const interval = setInterval(() => {
+  const viewer = document.querySelector('spline-viewer');
+  if (viewer && viewer.shadowRoot) {
+    const logo = viewer.shadowRoot.querySelector('#logo');
+    if (logo) {
+      logo.remove();
+      clearInterval(interval);
+    }
+  }
+}, 500);
+
+      </script>
 </head>
 <body>
      <img class = "img-gradient" src="gradient.png" alt="gradient">
@@ -61,4 +74,5 @@
     
 </body>
 </html>
+
 
